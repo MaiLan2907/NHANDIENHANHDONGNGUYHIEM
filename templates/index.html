@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ thống phát hiện bạo lực</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-center p-5">
+    <div class="container mt-5">
+        <h1 class="text-danger mb-4">🎥 HỆ THỐNG PHÁT HIỆN BẠO LỰC TRƯỜNG HỌC</h1>
+        <p class="mb-4">Chọn chế độ bạn muốn sử dụng:</p>
+        <a href="{{ url_for('live') }}" class="btn btn-primary btn-lg m-2">📡 Camera trực tiếp</a>
+        <a href="{{ url_for('upload') }}" class="btn btn-success btn-lg m-2">🎬 Phân tích video upload</a>
+    </div>
+</body>
+</html>

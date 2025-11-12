@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống phát hiện đánh nhau - Trường học</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #f0f0f0; 
+            margin: 0;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 { color: #d32f2f; }
+        img { 
+            width: 100%; 
+            border-radius: 10px; 
+            border: 5px solid #333;
+        }
+        .alert {
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: none;
+        }
+        .danger { background: #ff1744; color: white; display: block; animation: blink 1s infinite; }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HỆ THỐNG GIÁM SÁT BẠO LỰC KHUÔN VIÊN TRƯỜNG</h1>
+        <div class="alert" id="alert">CẢNH BÁO: ĐANG XẢY RA ĐÁNH NHAU!</div> 
+        <img src="{{ url_for('video_feed') }}" alt="Live Camera">
+        <p>Thời gian cập nhật: <span id="time"></span></p>
+    </div>
+
+    <script>
+        setInterval(() => {
+            fetch('/status')
+                .then(res => res.json())
+                .then(data => {
+                    const alertDiv = document.getElementById('alert');
+                    if (data.violence_detected) {
+                        alertDiv.classList.add('danger');
+                       
+                    } else {
+                        alertDiv.classList.remove('danger');
+                    }
+                    document.getElementById('time').innerText = new Date().toLocaleString('vi-VN');
+                });
+        }, 1000);
+    </script>
+</body>
+</html>
