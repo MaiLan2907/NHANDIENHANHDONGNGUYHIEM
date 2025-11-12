@@ -4,6 +4,28 @@
   <img width="200" height="200" alt="Image" src="https://github.com/user-attachments/assets/626bce02-3119-4f69-a839-82bbc3c8bc97" />
 </p>
 </div>
+<div align="center">
+    <p align="center">
+        <img width="200" alt="dnu_logo" src="https://github.com/user-attachments/assets/2bcb1a6c-774c-4e7d-b14d-8c53dbb4067f" />
+        <img width="180" alt="fitdnu_logo" src="https://github.com/user-attachments/assets/ec4815af-e477-480b-b9fa-c490b74772b8" />
+        <img width="170" alt="aiotlab_logo" src="https://github.com/user-attachments/assets/41ef702b-3d6e-4ac4-beac-d8c9a874bca9" />
+    </p>
+
+<p align="center">
+  <a href="https://dainam.edu.vn">
+    <img alt="DaiNam University"
+         src="https://img.shields.io/badge/DaiNam_University-ff6b35?style=flat-square">
+  </a>
+  <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
+    <img alt="Faculty of IT"
+         src="https://img.shields.io/badge/Faculty_of_IT-0066cc?style=flat-square">
+  </a>
+  <a href="https://www.facebook.com/DNUAIoTLab">
+    <img alt="AIoTLab"
+         src="https://img.shields.io/badge/AIoTLab-28a745?style=flat-square&logo=facebook&logoColor=white">
+  </a>
+</p>
+</div>
 
 ## 📝 Giới thiệu
 Nhận diện hành động nguy hiểm qua camera và cảnh báo cho người dùng qua ứng dụng TELEGRAM và thông
